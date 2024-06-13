@@ -1,0 +1,121 @@
+﻿Q.1 Write a Program to check whether a string is a palindrome or not without using string functions.
+For example,
+Input:
+Enter any string: nayan
+
+
+Output:
+Given string is a Palindrome.
+
+
+------------------------------------------------
+
+
+For example,
+Input:
+Enter any string: hello
+
+
+Output:
+Given string is not a Palindrome.
+
+
+Ans: #include <stdio.h>
+
+
+int main() {
+  char k[40];
+  int len=0, p=1,i;
+  
+  printf("Enter any string:");
+  scanf("%s",k);
+  
+  for(int i=0; k[i]!= '\0'; i++){
+      len++;
+  }
+ for(int i=0; i<len/2;i++){
+     if(k[i] != k[len-1-i]){
+         p=0;
+         break;
+     }
+ }
+ if(p==1){
+     printf("Given string is Palindrome.");
+ }
+  else{
+      printf("Given string is not a Palindrome.");
+  }
+    return 0;
+}
+
+
+O\p: /tmp/xLruzf6jNp.o
+Enter any string:nayan
+Given string is Palindrome.
+
+
+=== Code Execution Successful ===
+/tmp/gOCKxFpZY1.o
+Enter any string:hello
+Given string is not a Palindrome.
+
+
+=== Code Execution Successful ===
+Q.2 Write a Program to count the frequency of each character in a given string.
+For example,
+Input:
+Enter any string: development
+
+
+Output:
+Frequency of each letter:
+d => 1
+e => 2
+v => 1
+l => 1
+o => 1
+p => 1
+m => 1
+n => 1
+t => 1
+Ans:   #include <stdio.h>
+
+
+int main() {
+ char str[500] ;
+ printf("entr any string:");
+ scanf("%s",str);
+ char value;
+ 
+ for(int i=0;str[i]!='\0';i++){
+     value=str[i];
+     int n=0;
+     for(int j=0;str[j] !='\0';j++){
+         if(value==str[j]){
+         n++;
+     }
+ }
+ printf("\n%c=> %d",value,n);
+ }
+ 
+    return 0;
+}
+
+
+O\p: /tmp/KDvXtzDzXg.o
+entr any string:devlopment
+
+
+d=> 1
+e=> 2
+v=> 1
+l=> 1
+o=> 1
+p=> 1
+m=> 1
+e=> 2
+n=> 1
+t=> 1
+
+
+=== Code Execution Successful ===
